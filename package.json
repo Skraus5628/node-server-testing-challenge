@@ -4,27 +4,36 @@
   "description": "Node Server Testing Challenge",
   "main": "server.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "cross-env NODE_ENV=test jest --verbose",
+    "server": "nodemon -r dotenv/config index.js",
+    "start": "node index.js"
   },
   "jest": {
     "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/node-server-testing.git"
+    "url": "git+https://github.com/skraus5628/node-server-testing.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/node-server-testing/issues"
+    "url": "https://github.com/skraus5628/node-server-testing/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/node-server-testing#readme",
+  "homepage": "https://github.com/skraus5628/node-server-testing#readme",
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "bcryptjs": "^2.4.3",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.12",
+    "sqlite3": "^4.1.1"
   }
 }
